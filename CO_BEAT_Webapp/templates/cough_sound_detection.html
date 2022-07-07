@@ -10,7 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <title>Cough-based COVID Detection</title>
+    <title>Audio-based COVID Detection</title>
     <style>
         #box-cont {
             border: 2px solid #dbe9ee;
@@ -32,9 +32,9 @@
                             <input type="file" name=coughSound required accept="audio/*" capture></input>
                             <input type="submit" name="submit" value="Upload" />
 
-                            {% if pred == 0.9 %}
+                            {% if pred >= 0.9 %}
                             <p class="alert alert-success mt-3">COVID NOT DETECTED</p>
-                            {% elif pred == 0.1 %}
+                            {% elif pred <= 0.1 %}
                             <p class="alert alert-danger mt-3">COVID DETECTED</p>
                             {% endif %}
 
@@ -43,10 +43,10 @@
                                 and
                                 then click on the
                                 Upload button.<br>
-                                2. The results will be displayed within a few seconds.<br><br>
+                                2. The results should be displayed in seconds.<br><br>
 
-                                Note: The result shown may not be correct always.
-                                Please continue to follow all the guidelines and stay safe!
+                                Note: The result has ~80% accuracy. This is no substitute for professional medical advice.
+                                Please continue to follow all the guidelines and preventive measures.
                             </p>
                             </p>
                         </div>
