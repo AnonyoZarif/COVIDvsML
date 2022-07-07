@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>COVIDvsML</title>
+    <title>COVID vs ML</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
@@ -52,17 +52,19 @@
     <br><br>
     <div class="container">
         <header class="jumbotron my-2">
-            <h1 class="display-4" id="color-blue">Let's defeat covid-19!</h1>
+            <h1 class="display-4" id="color-blue">Defeat COVID-19 using ML!</h1>
 
             <p class="lead">
 
-                <span class="font-weight-bold">Contact tracing for covid-19</span><br>
-                If a person tests positive for COVID-19 contact tracing is done to find
-                persons who had come in contact with them to prevent further spreading in the community.Click the button
-                below to find venues that people who were recently diagnosed with COVID-19 had been to.
+                <span class="font-weight-bold">COVID vs. ML</span><br>
+                With the rising infections of COVID-19 coronavirus in Bangladesh, people are rushing to their nearest hospitals
+                to test for the disease. But due to the surge of both infected and non-infected people in the testing centers, a lot of
+                new exposure to the virus is occurring.
+                This machine learning/AI-based tool prevents that by testing for COVID with quite reliable accuracy only from an x-ray or the audio recording of the patient's cough.
+                This, paired with the self evaluation of symptoms and self-quarantining of suspected patients, we can defeat COVID much easier.
             </p>
 
-            <a id="ctbutton" class="btn btn-primary btn-lg" href="contact-tracing-alerts/">Check contact tracing
+            <a id="ctbutton" class="btn btn-primary btn-lg" href="https://play.google.com/store/apps/details?id=com.shohoz.tracer" target="_blank">Contact tracing
                 alerts</a>
         </header>
         <!-- Page Features-->
@@ -72,7 +74,7 @@
                     <img class="card-img-top" src="{% static 'assets/aboutco.jpg' %}" alt="Coronavirus" />
                     <div class="card-body">
                         <h4 class="card-title">About COVID-19</h4>
-                        <p class="card-text">Read about the common symptoms,prevention measures etc</p>
+                        <p class="card-text">Read about the common symptoms, preventive measures</p>
                     </div>
                     <div class="card-footer cards"><a class="btn btn-dark" href="aboutcovid/">Visit Page</a>
                     </div>
@@ -84,17 +86,17 @@
                         alt="Bar graph for representation" />
                     <div class="card-body">
                         <h4 class="card-title">Data Dashboard</h4>
-                        <p class="card-text">Updated information and statics about covid cases across India</p>
+                        <p class="card-text">Updated information and statistics about covid cases</p>
                     </div>
-                    <div class="card-footer cards"><a class="btn btn-dark" href="dashboard/">Visit Page</a></div>
+                    <div class="card-footer cards"><a class="btn btn-dark" href="http://covid19tracker.gov.bd/" target="_blank">Visit Page</a></div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-4">
                 <div class="card h-100">
                     <img class="card-img-top" src="{% static 'assets/lung.jpg' %}" alt="xray representation" />
                     <div class="card-body">
-                        <h4 class="card-title">Chest-Xray based detection</h4>
-                        <p class="card-text">AI based tool to detect Covid 19 based on chest-xray</p>
+                        <h4 class="card-title">X-ray-based COVID detection</h4>
+                        <p class="card-text">AI-powered tool to detect COVID-19 based on chest x-ray features including consolidation, reticular interstitial thickening, ground glass opacification, pleural effusion etc.</p>
                     </div>
                     <div class="card-footer cards"><a class="btn btn-dark" href="detection/">Visit Page</a></div>
                 </div>
@@ -103,8 +105,8 @@
                 <div class="card h-100">
                     <img class="card-img-top" src="{% static 'assets/audio.jpg' %}" alt="Audio signal" />
                     <div class="card-body">
-                        <h4 class="card-title">Cough sound based detection</h4>
-                        <p class="card-text">Tool to predict the chances of covid based on cough sound.
+                        <h4 class="card-title">Cough-based COVID detection</h4>
+                        <p class="card-text">AI-powered tool to predict possible covid case based on cough sound.
                         </p>
                     </div>
                     <div class="card-footer cards"><a class="btn btn-dark" href="cough-sound-covid-detection/">Visit
@@ -117,7 +119,7 @@
     <!-- Footer-->
     <footer class="py-1 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright © Anonyo Zarif Akand 2021</p>
+            <p class="m-0 text-center text-white">Copyright &#169; 2021 - Anonyo Zarif Akand</p>
         </div>
     </footer>
     <!-- Bootstrap core JS-->
