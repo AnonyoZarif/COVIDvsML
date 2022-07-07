@@ -32,18 +32,18 @@
                             <input type="file" name=coughSound required accept="audio/*" capture></input>
                             <input type="submit" name="submit" value="Upload" />
 
-                            {% if pred >= 0.9 %}
+                            {% if pred == 0.9 %}
                             <p class="alert alert-success mt-3">COVID NOT DETECTED</p>
-                            {% elif pred <= 0.1 %}
+                            {% elif pred == 0.1 %}
                             <p class="alert alert-danger mt-3">COVID DETECTED</p>
                             {% endif %}
 
                             <p class="mt-5">Steps:<br>
-                                1.Select an audio file from your device using the Choose file/Browse button on the left
+                                1. Select an audio file from your device using the Choose file/Browse button on the left
                                 and
                                 then click on the
                                 Upload button.<br>
-                                2.The results will be displayed within a few seconds.<br><br>
+                                2. The results will be displayed within a few seconds.<br><br>
 
                                 Note: The result shown may not be correct always.
                                 Please continue to follow all the guidelines and stay safe!
