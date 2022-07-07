@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <title>Cough-based COVID Detection</title>
+    <style>
+        #box-cont {
+            border: 2px solid #dbe9ee;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-12">
+                    <div class="card mb-4">
+                        <div class="card-body" id="box-cont">
+                            <h3 class="card-title py-3">Upload cough sound </h3>
+
+                            <input type="file" name=coughSound required accept="audio/*" capture></input>
+                            <input type="submit" name="submit" value="Upload" />
+
+                            {% if pred == 1.0 %}
+                            <p class="alert alert-success mt-3">COVID NOT DETECTED</p>
+                            {% elif pred == 0.0 %}
+                            <p class="alert alert-danger mt-3">COVID DETECTED</p>
+                            {% endif %}
+
+                            <p class="mt-5">Steps:<br>
+                                1.Select an audio file from your device using the Choose file/Browse button on the left
+                                and
+                                then click on the
+                                Upload button.<br>
+                                2.The results will be displayed within a few seconds.<br><br>
+
+                                Note: The result shown may not be correct always.
+                                Please continue to follow all the guidelines and stay safe!
+                            </p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</body>
+
+</html>
