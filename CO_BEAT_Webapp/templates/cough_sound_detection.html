@@ -32,9 +32,9 @@
                             <input type="file" name=coughSound required accept="audio/*" capture></input>
                             <input type="submit" name="submit" value="Upload" />
 
-                            {% if pred == 1.0 %}
+                            {% if pred >= 0.9 %}
                             <p class="alert alert-success mt-3">COVID NOT DETECTED</p>
-                            {% elif pred == 0.0 %}
+                            {% elif pred <= 0.1 %}
                             <p class="alert alert-danger mt-3">COVID DETECTED</p>
                             {% endif %}
 
