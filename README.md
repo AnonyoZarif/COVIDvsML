@@ -17,5 +17,5 @@ I love developing AI-related stuff. I'm also a sport programming-enthusiast.
 
 <hr>
 
-[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)]
-[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)]
+![python](https://forthebadge.com/images/badges/made-with-python.svg)
+![html](https://forthebadge.com/images/badges/uses-html.svg)
